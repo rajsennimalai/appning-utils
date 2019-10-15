@@ -84,7 +84,7 @@ This is working based on Axios API. We can use **smfetch()** instead of **axios*
                 //logic
                 })
 
-All other request types(PUT, DELETE, etc.,) folows the same pattern.
+All other request types(PUT, DELETE, etc.,) follows the same pattern.
 
 
 
