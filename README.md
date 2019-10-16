@@ -1,4 +1,3 @@
-# appning-utils
 ### Appning Utilities
 
 ## This project contains the following util functions required by SVM React app
@@ -39,9 +38,15 @@ Existing :
                      "start": "react-scripts start",
 
 New:
+Ubuntu
 
                 "scripts": {
                      "start": "REACT_APP_API_URL=http://localhost:8080 react-scripts start"
+
+Windows
+
+                "scripts": {
+                     "start": "SET \"REACT_APP_API_URL=http://localhost:8080\" && react-scripts start",
 
 Base URL can be repalced with API or REST service IP and port.
 
@@ -85,7 +90,6 @@ This is working based on Axios API. We can use **smfetch()** instead of **axios*
                 })
 
 All other request types(PUT, DELETE, etc.,) follows the same pattern.
-
 
 
 
