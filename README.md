@@ -53,19 +53,19 @@ Base URL can be repalced with API or REST service IP and port.
 
 Step 3: Add the following line in App.js under   ```<MuiPickersUtilsProvider utils={MomentUtils}>```. This is to handle and display error messages like 404 - Page not found or any other connection related errors.
 
-```<NetworkHandler />```
+```<AppningUtil />```
 
 Example:
 
 App.js
 
-                import {NetworkHandler} from 'appning-util/commons';
+                import {AppningUtil} from 'appning-util/commons';
                 ....
                  <MuiPickersUtilsProvider utils={MomentUtils}>
-                 <NetworkHandler />
+                 <AppningUtil />
                 .....
 
-How to use?
+How to use smfetch?
 
 This is working based on Axios API. We can use **smfetch()** instead of **axios**.
 
@@ -91,9 +91,28 @@ This is working based on Axios API. We can use **smfetch()** instead of **axios*
 
 All other request types(PUT, DELETE, etc.,) follows the same pattern.
 
+How to use dialogUtil?
 
+instead of implementing **dilog Component** we can use **DialogUtil** package from appning-util library
 
+                import {dialogUtil} from 'appning-util/commons';
 
+                ...
+                //for information message
+                dialogUtil.info(header,message);
+                              
+                //for error message
+                  dialogUtil.error(header,message);
 
+                //for warning message
+                  dialogUtil.warning(header,message);
 
+                //for success message
+                  dialogUtil.success(header,message);
 
+                //for confirm Dialog
+                  dialogUtil.confirm(header,message,onConfirm(),onReject(),yeslabel,nolabel);
+               
+               //example for passing parameter in function
+               dialogUtil.confirm("Dataset","Sure You Want to Delete Table ",()=>removeTable(tableid),null,"delete","No")
+               
